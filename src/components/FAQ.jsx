@@ -11,7 +11,7 @@ const faqs = [
     question: "Do you offer end-to-end software development services?",
     answer: "Yes, we handle everything from ideation and UI/UX design to development, deployment, and post-launch support."
   },
-  { 
+  {  
     id:3,
     question: "What industries do you serve?",
     answer: "We work across industries like healthcare, finance, retail, logistics, education, and startups with tailor-made tech solutions."
@@ -48,35 +48,35 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [open, setOpen] = useState(null);
   
   return (
-    <section className="p-5 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+    <section className="bg-zinc-950 text-white py-12 px-6 space-y-8" style={{fontFamily:"'DM Sans',sans-serif"}}>
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:wght@900&display=swap');
+      .ff{font-family:'Fraunces',serif}@keyframes slideDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+      .sd{animation:slideDown .25s ease}`}</style>
 
-      <div className="space-y-4">
-      {faqs.map((faq, index) => ( 
-      <div key={index} className="border border-gray-400 rounded-lg p-4 cursor-pointer hover:bg-purple-100 transition"
-      onClick={() => setOpenIndex(openIndex === index ? null : index)}>
-
-      <h3 className="text-lg font-semibold">{faq.question}</h3>
-
-      {openIndex === index && (
-      <div className="my-2 text-gray-950">
-        {Array.isArray(faq.answer) ? (
-          <ul className="list-disc ml-6">
-            {faq.answer.map((item, i) => ( 
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        ) : (
-          <p>{faq.answer}</p>
-        )}
+      <div className="text-center space-y-3">
+        <p className="text-xs tracking-[.3em] uppercase text-amber-400">Got Questions?</p>
+        <h2 className="ff text-4xl md:text-5xl font-black">Frequently Asked <span className="text-amber-400">Questions</span></h2>
+        <div className="w-10 h-0.5 bg-amber-400 rounded-full mx-auto"/>
       </div>
-      )}
-      
-      </div>
-      ))}
+
+      <div className="max-w-3xl mx-auto space-y-3">
+        {faqs.map(({question,answer},i)=>(
+          <div key={i} onClick={()=>setOpen(open===i?null:i)}
+            className={`rounded-2xl border cursor-pointer p-5 transition-all duration-300 overflow-hidden border-amber-400/40`}>
+            
+            <div className="flex items-center justify-between gap-4">
+              <span className={`font-medium transition-colors ${open===i?"text-white":"text-white/70"}`}>{question}</span>
+              <span className={`text-amber-400 text-xl shrink-0 transition-transform duration-300 ${open===i?"rotate-45":"rotate-0"}`}>+</span>
+            </div>
+
+            {open===i&&(
+              <div className="sd text-white/50 leading-relaxed">{answer}</div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

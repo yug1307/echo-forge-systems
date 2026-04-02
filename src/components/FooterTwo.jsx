@@ -1,18 +1,26 @@
 import { FaWhatsapp, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+const socials = [
+ { label: <FaLinkedin className="text-blue-500"/>, href: "" },
+ { label: <FaWhatsapp className="text-green-500"/>, href: "" },
+ { label: <FaInstagram className="text-rose-500"/>, href: "" }
+];
+
 const FooterOne = () =>{ 
   return(
     <>   
-    <footer className="bg-gray-900 text-gray-300">
-      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-8 px-5 gap-4">
+    <footer className="bg-mist-900 text-gray-300" style={{fontFamily:"'DM Sans',sans-serif"}}>
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:wght@900&display=swap');.ff{font-family:'Fraunces',serif}`}</style>
+
+      <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-8 px-5 gap-4">
         {/* Logo */}
-        <svg width="0 160%" height="100%" viewBox="0 0 750 180" xmlns="http://www.w3.org/2000/svg">
-          <style>{`.hotel-name { font-family: "Didot", "Bodoni MT", "Playfair Display", serif; font-size: 60px; font-weight: 500; letter-spacing: 4px; fill: #b89b5e } .divider { stroke: #9e7b30ff; stroke-width: 5 }`}</style>
-          <line x1="170" y1="50" x2="530" y2="50" className="divider"/>
-          <text x="370" y="108" textAnchor="middle" className="hotel-name">ECHO FORGE SYSTEMS</text>
-          <line x1="170" y1="125" x2="530" y2="125" className="divider"/>
-        </svg>
+        <div className="text-center">
+          <div className="ff text-2xl font-black tracking-widest uppercase">
+            Echo <span className="text-amber-400">Forge</span> Systems
+          </div>
+          <p className="text-white/40 text-sm leading-relaxed">Building future-ready digital solutions for businesses worldwide.</p>
+        </div>
         
         {/* Company */}
         <div className="space-y-4">
@@ -40,10 +48,10 @@ const FooterOne = () =>{
         <div className="space-y-4">
           <h3 className="text-xl font-semibold text-white">Follow Us</h3>
 
-          <div className="flex gap-5 text-2xl">
-            <a href="#" className="hover:text-blue-500"><FaLinkedin/></a>
-            <a href="#" className="hover:text-green-400"><FaWhatsapp/></a>
-            <a href="#" className="hover:text-pink-500"><FaInstagram/></a>
+          <div className="flex gap-3">
+            {socials.map((follow, index)=>(
+              <div key={index} className="border border-white hover:border-amber-400 hover:text-amber-400 rounded-lg p-2">{follow.label}</div>
+            ))}
           </div>
         </div>
       </section>

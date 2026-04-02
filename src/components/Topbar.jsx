@@ -6,19 +6,20 @@ const Topbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-sky-800">
-      <div className="max-w-6xl mx-auto flex items-center px-5 justify-between">
-        
+    <header className="sticky top-0 z-50 bg-mist-900" style={{fontFamily:"'DM Sans',sans-serif"}}>
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:wght@900&display=swap');.ff{font-family:'Fraunces',serif}`}</style>
+
+      <div className="max-w-6xl mx-auto flex items-center p-4 justify-between">     
         {/* Logo */}
-        <svg width="600" height="180%" viewBox="0 0 1200 180" xmlns="http://www.w3.org/2000/svg">
-          <style>{`.hotel-name { font-family: "Didot", "Bodoni MT", "Playfair Display", serif; font-size: 60px; font-weight: 500; letter-spacing: 4px; fill: #66b85e } .divider { stroke: #66b85e; stroke-width: 5 }`}</style>
-          <line x1="170" y1="50" x2="530" y2="50" className="divider"/>
-          <text x="370" y="108" textAnchor="middle" className="hotel-name">ECHO FORGE SYSTEMS</text>
-          <line x1="170" y1="125" x2="530" y2="125" className="divider"/>
-        </svg> 
+        <div className="text-center">
+          <div className="ff text-2xl text-white tracking-widest uppercase">
+            Echo <span className="text-amber-400">Forge</span> Systems
+          </div>
+          <p className="text-white/40 leading-relaxed">Building future-ready digital solutions for businesses worldwide</p>
+        </div> 
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center space-x-6 text-white text-xl font-medium">
+        <nav className="hidden md:flex items-center gap-10 text-white text-xl font-medium">
           <Link to="/" className="hover:text-[#C9A24D]">Home</Link>
           <Link to="/about" className="hover:text-[#C9A24D]">About</Link>
           <Link to="/contact" className="hover:text-[#C9A24D]">Contact</Link>
