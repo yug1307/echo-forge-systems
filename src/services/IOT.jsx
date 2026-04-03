@@ -65,7 +65,7 @@ const points = [
   { icon: "🛠️", text: "Dedicated support & maintenance" },
 ];
 
-const IoT = () => {
+const IOT = () => {
   return ( 
     <>  
     <Topbar/>
@@ -88,14 +88,20 @@ const IoT = () => {
       </header>
 
       {/* 🔧 Our IOT Services */}
-      <section className="bg-zinc-900 py-10 px-5 space-y-6">
-        <h2 className="text-3xl font-bold text-sky-400 text-center">🔧 Our IOT Services</h2>
+      <section className="bg-zinc-900 py-10 px-5 space-y-6" style={{fontFamily:"'DM Sans',sans-serif"}}>
+        <style>{`@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');.ff{font-family:'Fraunces',serif}`}</style>
+
+        <div className="text-center space-y-2">
+          <p className="text-xs tracking-[.3em] uppercase text-amber-400">What We Offer</p>
+          <h2 className="ff text-3xl text-white">🔧 <span className="text-amber-400">IOT</span> Services</h2>
+          <div className="w-20 h-0.5 bg-amber-400 rounded-full mx-auto"/>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto gap-6">
           {services.map((service, index) => (
 
             <div 
-              key={index} 
+              key={index}  
               className="border-2 border-white/50 hover:border-sky-400/50 text-white/60 space-y-3 rounded-2xl p-5 
               transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] bg-white/5">
 
@@ -122,8 +128,8 @@ const IoT = () => {
         <style>{`@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');.ff{font-family:'Fraunces',serif}`}</style>
 
         <div className="text-center space-y-2">
-          <h2 className="ff text-3xl text-white">Why Choose Us for <span className="text-amber-400">Saas?</span></h2>
-          <div className="w-15 h-0.5 bg-amber-400 rounded-full mx-auto"/>
+          <h2 className="ff text-3xl text-white">Why Choose Us for <span className="text-amber-400">IoT?</span></h2>
+          <div className="w-20 h-0.5 bg-amber-400 rounded-full mx-auto"/>
         </div>
         
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto gap-6">
@@ -163,4 +169,4 @@ const IoT = () => {
   )
 }
 
-export default IoT
+export default IOT

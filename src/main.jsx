@@ -8,7 +8,7 @@ import ContactUs from './components/ContactUs.jsx';
 import WebDevelopment from './services/WebDevelopment.jsx';
 import CyberSecurity from './services/CyberSecurity.jsx';
 import SaaS from './services/SaaS.jsx';
-import IoT from './services/IoT.jsx';
+import IOT from './services/IOT.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
  
@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/web-development" element={<WebDevelopment />} />
       <Route path="/cyber-security" element={<CyberSecurity />} />
       <Route path="/saas" element={<SaaS />} />
-      <Route path="/iot" element={<IoT />} />
+      <Route path="/iot" element={<IOT />} />
     </Routes>
   </BrowserRouter>
 )

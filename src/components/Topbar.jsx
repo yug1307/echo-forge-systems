@@ -6,7 +6,7 @@ const Topbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-mist-900" style={{fontFamily:"'DM Sans',sans-serif"}}>
+    <header className="sticky top-0 z-50 bg-zinc-950 border-b border-white" style={{fontFamily:"'DM Sans',sans-serif"}}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:wght@900&display=swap');.ff{font-family:'Fraunces',serif}`}</style>
 
       <div className="max-w-6xl mx-auto flex items-center p-4 justify-between">     
@@ -24,7 +24,7 @@ const Topbar = () => {
           <Link to="/about" className="hover:text-[#C9A24D]">About</Link>
           <Link to="/contact" className="hover:text-[#C9A24D]">Contact</Link>
         </nav>
-
+ 
         {/* Mobile Menu Button */}
         <button className="md:hidden text-2xl text-white" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FaTimes /> : <FaBars />}

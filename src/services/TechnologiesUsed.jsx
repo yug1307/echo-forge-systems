@@ -43,7 +43,7 @@ const TechnologiesUsed = () => {
       <div className="text-center space-y-2">
         <p className="text-xs tracking-[.3em] uppercase text-amber-400">Our Stack</p>
         <h2 className="ff text-3xl md:text-4xl font-black text-white">Technologies <span className="text-amber-400">We Use</span></h2>
-        <div className="w-15 h-0.5 bg-amber-400 rounded-full mx-auto"/>
+        <div className="w-20 h-0.5 bg-amber-400 rounded-full mx-auto"/>
       </div>
 
       <div className="max-w-xl mx-auto space-y-10">

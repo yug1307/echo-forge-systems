@@ -101,7 +101,7 @@ const SaaS = () => {
         <div className="text-center space-y-2">
           <p className="text-xs tracking-[.3em] uppercase text-amber-400">What We Offer</p>
           <h2 className="ff text-3xl text-white">☁ <span className="text-amber-400">SaaS</span> Services</h2>
-          <div className="w-15 h-0.5 bg-amber-400 rounded-full mx-auto"/>
+          <div className="w-20 h-0.5 bg-amber-400 rounded-full mx-auto"/>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto gap-6">
@@ -139,7 +139,7 @@ const SaaS = () => {
         <div className="text-center space-y-2">
           <p className="text-xs tracking-[.3em] uppercase text-amber-400">Ideal Clients</p>
           <h2 className="ff text-3xl md:text-4xl font-black text-white">Who Is This <span className="text-amber-400">For?</span></h2>
-          <div className="w-15 h-0.5 bg-amber-400 rounded-full mx-auto"/>
+          <div className="w-20 h-0.5 bg-amber-400 rounded-full mx-auto"/>
         </div>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto gap-6">
@@ -164,7 +164,7 @@ const SaaS = () => {
 
         <div className="text-center space-y-2">
           <h2 className="ff text-3xl text-white">Why Choose Us for <span className="text-amber-400">Saas?</span></h2>
-          <div className="w-15 h-0.5 bg-amber-400 rounded-full mx-auto"/>
+          <div className="w-20 h-0.5 bg-amber-400 rounded-full mx-auto"/>
         </div>
         
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto gap-6">
