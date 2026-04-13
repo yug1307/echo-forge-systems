@@ -38,8 +38,8 @@ export default function Hero() {
         </div> 
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-5">
-          {[["50+","Projects Delivered"],["98%","Client Satisfaction"],["5+","Years Experience"]].map(([n,l])=>(
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+          {[["10+","Projects Delivered"],["98%","Client Satisfaction"],["2+","Years Experience"]].map(([n,l])=>(
             <div key={l} className="rounded-2xl border border-white/8 bg-white/3 p-6 hover:border-amber-400/30 hover:bg-white/6 transition-all duration-200">
               <div className="ff text-3xl font-black text-amber-400">{n}</div>
               <div className="text-xs text-white/40 mt-2 uppercase tracking-wider">{l}</div>

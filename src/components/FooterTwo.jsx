@@ -10,7 +10,7 @@ const socials = [
 const FooterOne = () =>{ 
   return(
     <>   
-    <footer className="bg-zinc-950 text-gray-300" style={{fontFamily:"'DM Sans',sans-serif"}}>
+    <footer className="bg-slate-900 text-gray-300" style={{fontFamily:"'DM Sans',sans-serif"}}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:wght@900&display=swap');.ff{font-family:'Fraunces',serif}`}</style>
 
       <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-8 px-5 gap-4">
@@ -27,7 +27,7 @@ const FooterOne = () =>{
           <h2 className="text-xl text-white font-semibold">Company</h2>
 
           <ul className="space-y-2">
-            <li>About Us</li>
+            <li><Link to="/about">About Us</Link></li>
             <li>Privacy Policy</li>
           </ul>
         </div>

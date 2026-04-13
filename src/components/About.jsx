@@ -33,7 +33,7 @@ const About = () => {
   return ( 
     <>
     <Topbar />  
-      <section className="bg-zinc-950 text-white py-12 px-6 space-y-8" style={{fontFamily:"'DM Sans',sans-serif"}}>
+      <section className="bg-zinc-900 text-white py-12 px-6 space-y-8" style={{fontFamily:"'DM Sans',sans-serif"}}>
         <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:wght@900&display=swap');.ff{font-family:'Fraunces',serif}`}</style>
 
         {/* Header */}
@@ -44,24 +44,23 @@ const About = () => {
         </div>
  
         {/* Design. Promote. Automate */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {[["🎨","Design it","High-performing websites and digital solutions that represent your brand."],
             ["📣","Promote it","Targeted marketing strategies to reach the right audience and grow your reach."],
             ["⚙️","Automate it","Smart SaaS and IoT tools to save time, reduce costs, and scale efficiently."]
           ].map(([icon,title,desc])=>(
-            <div key={title} className="rounded-2xl border border-white/8 p-7 hover:border-amber-400/40 hover:bg-white/6 hover:-translate-y-1 transition-all duration-300 text-center">
+
+            <div key={title} className="rounded-2xl border border-white/8 p-7 hover:border-amber-400/40 bg-white/5 hover:-translate-y-1 transition-all duration-300 text-center">
               <div className="text-3xl group-hover:scale-110 transition-transform duration-300">{icon}</div>
               <h3 className="ff text-white font-black text-2xl my-2">{title}</h3>
-              <p className="text-white/45 leading-relaxed">{desc}</p>
+              <p className="text-white/65 leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
-      </section>
-
-        <div className="px-16"><div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"/></div>
+      </section> 
 
       {/* Vision and Mission Section */}
-      <section className="bg-zinc-950 text-white py-12 px-6">
+      <section className="bg-zinc-900 text-white py-12 px-6">
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-6xl mx-auto">
           {[
@@ -80,14 +79,10 @@ const About = () => {
         </div>
       </section>
         
-        <div className="px-16"><div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"/></div>
-            
             <WhatWeDo/>
-            
-        <div className="px-16"><div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"/></div>
 
       {/* Our Team Section */}
-      <div className="bg-zinc-950 text-white py-16 px-6 space-y-8" style={{fontFamily:"'DM Sans',sans-serif"}}>
+      <div className="bg-zinc-900 text-white py-16 px-6 space-y-8" style={{fontFamily:"'DM Sans',sans-serif"}}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:wght@900&display=swap');.ff{font-family:'Fraunces',serif}`}</style>
 
       <div className="text-center space-y-4">
@@ -99,12 +94,12 @@ const About = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-7xl mx-auto">
         {Team.map((member, index)=>(
 
-          <div key={index} className="border border-white rounded-xl space-y-2">
+          <div key={index} className="bg-white/5 border border-white rounded-xl space-y-2">
            <img src={member.imgSrc} alt="" className="w-full lg:h-[40vh] sm:h-96 object-cover rounded-t-xl" />
             
             <div className="p-4 space-y-2"> 
               <h3 className="ff text-2xl text-center">{member.name}</h3> 
-              <p className="text-white/65">{member.desc}</p>
+              <p className="text-white/60">{member.desc}</p>
             </div> 
           </div>
         ))}

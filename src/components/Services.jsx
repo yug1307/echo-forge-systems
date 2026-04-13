@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const services = [
+const services = [ 
   { icon: "🖥️", title: "Web Development", desc: "Build high-performance websites that drive growth.", link: "/web-development" },
   { icon: "🔒", title: "Cyber Security", desc: "Protecting your digital assets. Securing your future.", link: "/cyber-security" },
   { icon: "☁️", title: "Software as a Service", desc: "Build, launch & scale powerful SaaS products.", link: "/saas" },

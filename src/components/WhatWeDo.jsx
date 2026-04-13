@@ -1,4 +1,4 @@
-import { Code, Globe, Cloud, Cpu } from "lucide-react"; // icons
+import { Code, Cloud, Cpu, Lock } from "lucide-react"; // icons
 
 const WhatWeDo = () => {
   const services = [
@@ -8,9 +8,9 @@ const WhatWeDo = () => {
       icon: <Code size={40} className="text-indigo-600" />,
     },
     {
-      title: "Digital Marketing",
-      desc: "SEO, social media, and online campaigns to grow your digital presence.",
-      icon: <Globe size={40} className="text-green-600" />,
+      title: "Cyber Security",
+      desc: "Shield your business 24/7 with enterprise-grade security solutions.",
+      icon: <Lock size={40} className="text-green-600" />,
     },
     {
       title: "Software as a Service (SaaS)",
@@ -24,8 +24,8 @@ const WhatWeDo = () => {
     },
   ];
 
-  return (
-    <section className="py-12 px-6 bg-zinc-950 text-center">
+  return ( 
+    <section className="py-12 px-6 bg-zinc-900 text-center">
       <h2 className="text-3xl font-bold text-amber-500 tracking-[.3em] uppercase">🚀 What We Do</h2>
       <p className="text-lg text-white/45 my-2">
         We are experts in delivering cutting-edge solutions that empower your
@@ -37,10 +37,10 @@ const WhatWeDo = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="border border-white rounded-2xl p-6 hover:border-amber-500 hover:-translate-y-2 transition duration-300">
+            className="bg-white/5 border border-white rounded-2xl p-6 hover:border-rose-500 hover:-translate-y-2 transition duration-300">
             <div className="flex justify-center">{service.icon}</div>
             <h3 className="text-white text-2xl font-semibold my-2">{service.title}</h3>
-            <p className="text-white/45 leading-relaxed">{service.desc}</p>
+            <p className="text-white/65 leading-relaxed">{service.desc}</p>
           </div>
         ))}
       </div>

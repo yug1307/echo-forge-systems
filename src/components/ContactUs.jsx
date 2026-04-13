@@ -44,7 +44,7 @@ const ContactUs = () => {
           <ContactForm/>
           
           {/* Contact */}
-          <div className="border-2 border-violet-500 rounded p-7 space-y-4">
+          <div className="bg-zinc-900 border-2 border-violet-500 rounded p-7 space-y-4">
             <h2 className="text-sky-400 text-2xl font-bold">Get in Touch</h2>
 
             <div className="space-y-6">
