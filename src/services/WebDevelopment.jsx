@@ -150,7 +150,7 @@ const WebDevelopment = () => {
       <section className="bg-zinc-900 py-12">
         <div 
           style={{background:"linear-gradient(to top, #9333ea, #2563eb)"}} 
-          className="flex flex-col items-center border-2 border-white rounded-xl py-7 px-5 md:mx-20 text-center space-y-5">
+          className="flex flex-col items-center border-2 border-white rounded-xl py-7 px-5 mx-5 sm:mx-10 text-center space-y-5">
 
           <p className="text-3xl font-bold text-white">📞 Let’s Build Your Digital Presence</p>
 
